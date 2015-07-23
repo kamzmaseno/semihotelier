@@ -1,0 +1,3 @@
+== README
+
+This is a web application based on ruby,its a pre version for my project,this is for testing purposes only,make and break things to make awesome things at the long last

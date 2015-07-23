@@ -1,0 +1,40 @@
+// Place all the styles related to the Towns controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body{
+    background-image: url(homepg.jpg);
+}
+.town {
+	text-align: left;
+	color: white;
+    text-shadow: 2px 2px 4px #000000;
+    border-radius: 15px 50px;
+    background: #A48A8A;
+    padding: 20px; 
+    width: 200px;
+    height: 30px;
+    -webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
+    transition: width 2s; 
+}
+
+.town:hover {
+	width: 300px;
+}
+
+.hotels {
+	text-align: center;
+	
+}
+
+p {
+	text-align: center;
+    color: #5A0000;
+}
+.border {
+    border-radius: 25px;
+	width: 820px;
+    padding: 10px;
+    border: 5px solid gray;
+    margin: 0; 
+}
