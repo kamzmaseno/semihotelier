@@ -3,5 +3,6 @@ class StaticpagesController < ApplicationController
   end
 
   def Contact
+  	
   end
 end

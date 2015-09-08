@@ -1,19 +1,4 @@
 <% @room.each do |t| %>
-		<table class="table">
-			<tbody>
-				<tr>
-					<td>
-			            <%= t.type %>
-		             </ul>
-					</td>
-				</tr>
-
-				<tr>
-					<td>
-			            <%= t.price %>
-		             </ul>
-					</td>
-				</tr>
-			</tbody>
-		</table>
+		<% if t.type == "single" && (t.price).max %>
+		  <strong><% puts "the cheapest single room in town is:" #{t.type} %></strong>
 <% end %>

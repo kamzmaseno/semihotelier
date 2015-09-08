@@ -8,6 +8,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'gmaps4rails'
 gem 'devise'
+gem 'bootstrap-sass', '~> 3.3.5'
 gem 'activeadmin', '~> 1.0.0.pre1'
 gem 'underscore-rails'
 gem 'sdoc', '~> 0.4.0', group: :doc

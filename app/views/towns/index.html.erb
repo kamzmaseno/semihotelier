@@ -1,27 +1,30 @@
 <body>
-  <% @town.each do |t| %>
-  <div class="town">
-       <ol>
-          <h1>
-          <%= t.name %>
-          </h1>
-    </ol>
-  </div>
-  <% t.hotels.each do |thotels|%>
-  <div class="border">
-    <div class="hotels">
-        <strong>
-         <%= thotels.name %>
-        </strong>
-  </div>
-        <% thotels.rooms.each do |rooms|%>
-        <p>
-          <%= rooms.type %>
-         <%= rooms.price %>
-    </p>
-    <% end %>
-  </div>
-    <% end %>
+    <% @town.each do |t| %>
+    <div class="well well-lg">
+  <h1>
+      <%= t.name %>
+  </h1>
+    <% t.hotels.each do |thotels|%>
+    <table class="table table-bordered">
+    <caption><%= thotels.name %></caption>
+    <thead>
+<tr>
+<th>type</th>
+<th>price</th>
+<th>reviews</th>
+</tr>
+</thead>  
+    <% thotels.rooms.each do |rooms|%>
+    <tbody>
+<tr>
+<td><%= rooms.type %></td>
+<td><%= rooms.price %></td>
+<td>"reviews"</td>
+</tr>
+ <% end %>
+  </tbody>
   <% end %>
+</table>
+  </div>
+<% end %>
 </body>
-
