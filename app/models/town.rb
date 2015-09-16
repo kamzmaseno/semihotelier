@@ -4,4 +4,6 @@ class Town < ActiveRecord::Base
                                    reject_if: 
                                    proc { |attributes| attributes['name'].blank?},
                                    allow_destroy: true
+
+                                  
 end

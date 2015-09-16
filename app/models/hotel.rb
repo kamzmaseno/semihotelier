@@ -5,4 +5,7 @@ class Hotel < ActiveRecord::Base
                                    reject_if: 
                                    proc { |attributes| attributes['type'].blank?},
                                    allow_destroy: true
+     scope :townhotels, -> (id){
+    	joins(:town).where('town_id == ?', id).group("name")
+    }                              
 end

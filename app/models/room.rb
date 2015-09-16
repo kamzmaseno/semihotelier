@@ -6,5 +6,10 @@ class Room < ActiveRecord::Base
                                    reject_if: 
                                    proc { |attributes| attributes['name'].blank?},
                                    allow_destroy: true
-	
+     scope :townhotelrooms, -> (id){
+    	joins(:hotel).where('hotel_id == ?', id).group("type")
+    }      
+    scope :cheapestsingnai, -> (roomtype){ where('type == ?', roomtype).minimum('price').to_s
+    }                      
 end
+

@@ -1,1 +1,8 @@
-<h1>Towns#index</h1>
+<div class="jumbotron">
+	<strong>The cheapest single room in <% @town.name %></strong>
+	<div class="cointainer">
+
+		<%= Room.where(type:  'single room').minimum("price") %>
+	</div>
+</div>
+<% Hotel.where (Room.where(type:  'single room').minimum("price")) %>

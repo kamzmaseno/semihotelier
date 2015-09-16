@@ -1,4 +1,8 @@
-<% @room.each do |t| %>
-		<% if t.type == "single" && (t.price).max %>
-		  <strong><% puts "the cheapest single room in town is:" #{t.type} %></strong>
-<% end %>
+<body>
+	<div class="jumbotron">
+		<div class="alert alert-success">
+		<p>cheapest single room</p>
+        <%= Room.where(type:  'single room').minimum("price") %>
+    </div>
+	</div>
+</body>
