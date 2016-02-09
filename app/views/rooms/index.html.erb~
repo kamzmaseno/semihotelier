@@ -1,0 +1,6 @@
+<body>
+	<div class="alert alert-success">
+		<p>cheapest single room</p>
+        <%= Room.where(type:  'double room').minimum("price") %>
+    </div>	
+</body>
